@@ -1,0 +1,23 @@
+{
+  "name": "sonar-core",
+  "displayName": "S.O.N.A.R — C.O.R.E",
+  "version": "2.0.0-alpha.2",
+  "description": "C.O.R.E v2.0: fondasi bersama S.O.N.A.R — context profile klien, router diagnostik funnel SEO (Discover → Convert), sumber data GSC/GA4 (Windsor.ai, CSV, GSC UI), protokol Claude in Chrome, definisi CTR tunggal, model biaya + gate SEMrush, aturan bukti, dan format handoff antar project.",
+  "author": {
+    "name": "Dandy"
+  },
+  "skills": [
+    "./skills"
+  ],
+  "keywords": [
+    "seo",
+    "gsc",
+    "ga4",
+    "windsor",
+    "semrush",
+    "technical-seo",
+    "ctr",
+    "context-profile",
+    "sonar"
+  ]
+}

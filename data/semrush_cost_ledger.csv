@@ -1,0 +1,4 @@
+date,project,client,report,database,params,rows_requested,rows_returned,units_estimated,units_actual,units_actual_method,notes
+2026-07-30,optimization,Precicon,phrase_these,sg,36 keyword,36,,360,320,hitung_baris,"Seed dari handover M.E.T.A; angka aktual ditulis ~320, gate tidak dikonfirmasi eksplisit"
+2026-08-03,strategy,Gwenchana,backlinks_* (Track A),,"overview, refdomains, anchors",,,610,1360,hitung_baris,"Seed dari handover S.O.N.A.R; estimasi 460-760 (nilai tengah ditulis), lonjakan karena backlink PBN"
+2026-10-02,discovery,Gwenchana,phrase_these,,lihat handover P.I.N.G 2 Okt,,,6583,1370,hitung_baris,"Seed dari handover P.I.N.G; estimasi pakai rumus lama ~57 per seed"
