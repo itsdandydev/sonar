@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.0-alpha.3 (S.O.N.A.R) / 2.0.0-alpha.3 (C.O.R.E) — 2026-10-22
+
+### Ditambahkan
+- Folder `commands/` di `sonar-core`: 15 command dari tabel Commands di SKILL.md sekarang jadi slash command beneran (`/sonar-core:core`, `/sonar-core:import`, `/sonar-core:diagnose`, `/sonar-core:gsc`, `/sonar-core:ctr`, `/sonar-core:inspect`, `/sonar-core:gate`, `/sonar-core:ledger`, `/sonar-core:handoff`, dan command context profile `validate`, `export`, `update`, `status`, `upgrade`, `reset`), sama seperti plugin NEXUS dan Wagyu. Sebelumnya hanya muncul satu entri (`sonar-core:core`).
+- Setiap command hanya memanggil skill `core` dan menunjuk modul yang tepat; aturannya tetap ditulis sekali di `references/`.
+
 ## 3.0.0-alpha.2 (S.O.N.A.R) / 2.0.0-alpha.2 (C.O.R.E) — 2026-10-16
 
 Hasil uji pertama router di situs nyata (situs agency sendiri), mode Ringan+: sitemap dan crawl HTML mentah lewat curl, GSC performa lewat Windsor, GSC Page Indexing lewat Claude in Chrome.
