@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "S.O.N.A.R v3 — ekosistem SEO/GEO: C.O.R.E (fondasi bersama) + NEXUS (produksi artikel).",
-    "version": "3.0.0-alpha.2"
+    "version": "3.0.0-alpha.3"
   },
   "plugins": [
     {
       "name": "sonar-core",
       "source": "./plugins/sonar-core",
       "description": "C.O.R.E v2.0 — fondasi bersama semua project S.O.N.A.R.",
-      "version": "2.0.0-alpha.2",
+      "version": "2.0.0-alpha.3",
       "category": "seo"
     },
     {

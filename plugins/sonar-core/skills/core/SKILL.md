@@ -60,6 +60,8 @@ Alur ini tetap sama dengan v1.1, ditambah blok `seo`.
 
 ## Commands
 
+Setiap command ini juga slash command beneran di Claude Code: `/sonar-core:diagnose`, `/sonar-core:gsc`, dan seterusnya (file di `commands/`).
+
 | Command | Aksi | Modul |
 |---|---|---|
 | `/core [klien]` | Mulai context profile (`--quick` untuk Quick Mode) | context |
@@ -75,4 +77,4 @@ Alur ini tetap sama dengan v1.1, ditambah blok `seo`.
 
 ## Status versi
 
-C.O.R.E 2.0.0-alpha.2. Modul teks sudah lengkap dan router sudah diuji sekali di situs nyata (lihat CHANGELOG). Script bersama (`normalize_gsc.py`, `build_url_master.py`, `classify_funnel.py`, `classify_ctr.py`, `estimate_semrush.py`) belum ada; sampai tersedia, kerjakan hitungan dengan Python di bash mengikuti definisi di modul, dan tulis kodenya dengan jelas supaya bisa dipindah ke script. Ambang angka (CTR, minimal impresi, 30% site-level) adalah titik awal yang sedang diuji.
+C.O.R.E 2.0.0-alpha.3. Modul teks sudah lengkap dan router sudah diuji sekali di situs nyata (lihat CHANGELOG). Script bersama (`normalize_gsc.py`, `build_url_master.py`, `classify_funnel.py`, `classify_ctr.py`, `estimate_semrush.py`) belum ada; sampai tersedia, kerjakan hitungan dengan Python di bash mengikuti definisi di modul, dan tulis kodenya dengan jelas supaya bisa dipindah ke script. Ambang angka (CTR, minimal impresi, 30% site-level) adalah titik awal yang sedang diuji.

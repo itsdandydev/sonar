@@ -21,7 +21,7 @@ Technical  Optimization  Strategy  Discovery ──►  Production (NEXUS)
 | Path | Isi |
 |---|---|
 | `.claude-plugin/marketplace.json` | Marketplace S.O.N.A.R: plugin `sonar-core` (repo ini) dan `nexus` (dari `lawzphilemon/nexus-plugin`) |
-| `plugins/sonar-core/` | Plugin C.O.R.E v2.0 berisi skill `core` |
+| `plugins/sonar-core/` | Plugin C.O.R.E v2.0 berisi skill `core` dan 15 slash command (`/sonar-core:core`, `/sonar-core:diagnose`, dst.) |
 | `data/semrush_cost_ledger.csv` | Log biaya SEMrush aktual, sumber harga per baris |
 | `projects/` | Spesifikasi lima project dan peta migrasi dari project lama |
 
