@@ -6,7 +6,16 @@
 - Agen `sonar` (Sonnet): orkestrator yang menjalankan skill `core`, menyerahkan pencarian read-only ke `sonar-scout`, dan konsultasi advisor Opus di keputusan besar. Mulai dengan `claude --agent sonar-core:sonar --advisor opus`.
 - Agen `sonar-scout` (Haiku, read-only): fakta context profile, cek halaman sumber, dokumentasi resmi, dan output lama yang tumpang tindih. Tidak mengedit file dan tidak menulis kesimpulan.
 - Bagian "Konsultasi advisor" di SKILL.md: konsultasi sebelum kesimpulan router atau API gate SEMrush terkunci, saat jalur data gagal dengan error yang sama dua kali, dan sebelum deliverable atau handoff dikirim. Tanpa advisor, tiga cek itu dijalankan sendiri dan dicatat di laporan.
-- Prompt agen `sonar` memuat tiga momen itu secara langsung: draf kesimpulan router dulu, konsultasi, baru file laporan ditulis; dan pencarian di luar folder kerja wajib lewat `sonar-scout`. Tanpa ini, uji headless di gwenchana.digital melewatkan momen 1 dan tidak pernah memakai scout. Setelah perubahan ini, momen 1 dan 3 jalan dan scout terpakai (uji 2026-11-02, $1,97: Sonnet $0,83, Opus $1,13, Haiku $0,01).
+
+### Diperbaiki
+- Skill `core` diganti nama menjadi `core-engine`. Nama `sonar-core:core` bentrok dengan command `/core`: panggilan skill dari setiap command memuat command `/core` dengan argumen kosong, bukan SKILL.md. Akibatnya aturan SKILL.md tidak pernah termuat, `references/` dicari lewat Glob dan bisa kena versi cache lama, dan sesekali alur berhenti di "tidak ada klien". Bug ini juga ada di alpha.3. Slash command tidak berubah.
+- SKILL.md: path `references/` relatif ke base directory skill; jangan dicari lewat Glob.
+- Konsultasi advisor diperketat: draf kesimpulan dulu, konsultasi, baru file laporan ditulis; penolakan izin dihitung sebagai error untuk momen 2; maksimal empat konsultasi, tidak berturut-turut; output besar disimpan ke file supaya transcript kecil.
+
+### Hasil uji (2026-11-02, diagnosa Ringan gwenchana.digital, dua run paralel)
+- SKILL.md termuat, momen 1 dan 3 jalan, `sonar-scout` dipakai untuk mencari profil klien, dua konsultasi per run.
+- Momen 2 masih terlewat di kedua run (penolakan izin shell yang berulang); agen mencatatnya sendiri di laporan.
+- Biaya per run $1,87 dan $2,17 (Sonnet $0,81–0,93, Opus $1,05–1,23, Haiku $0,01–0,02).
 
 ## 3.0.0-alpha.3 (S.O.N.A.R) / 2.0.0-alpha.3 (C.O.R.E) — 2026-10-22
 

@@ -21,7 +21,7 @@ Technical  Optimization  Strategy  Discovery ──►  Production (NEXUS)
 | Path | Isi |
 |---|---|
 | `.claude-plugin/marketplace.json` | Marketplace S.O.N.A.R: plugin `sonar-core` (repo ini) dan `nexus` (dari `lawzphilemon/nexus-plugin`) |
-| `plugins/sonar-core/` | Plugin C.O.R.E v2.0 berisi skill `core` dan 15 slash command (`/sonar-core:core`, `/sonar-core:diagnose`, dst.) |
+| `plugins/sonar-core/` | Plugin C.O.R.E v2.0 berisi skill `core-engine` dan 15 slash command (`/sonar-core:core`, `/sonar-core:diagnose`, dst.) |
 | `data/semrush_cost_ledger.csv` | Log biaya SEMrush aktual, sumber harga per baris |
 | `projects/` | Spesifikasi lima project dan peta migrasi dari project lama |
 
@@ -62,7 +62,7 @@ Sonnet menjalankan sesi dan menulis hasil, `sonar-scout` di Haiku mengerjakan pe
 
 ## Cara memperbarui aturan
 
-1. Ubah file di `plugins/sonar-core/skills/core/references/`, bukan di project.
+1. Ubah file di `plugins/sonar-core/skills/core-engine/references/`, bukan di project.
 2. Catat perubahannya di `CHANGELOG.md` dan naikkan versi di `plugin.json` dan `marketplace.json`.
 3. Ambang angka (CTR, minimal impresi, 30% site-level) dan tabel harga SEMrush hanya diubah berdasarkan data: hasil uji klien atau ledger.
 

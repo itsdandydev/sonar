@@ -8,5 +8,5 @@ argument-hint: ""
 
 Argumen: $ARGUMENTS
 
-1. Panggil skill `sonar-core:core` dulu, lalu baca modul `references/ctr.md` sebelum mulai. Aturan di skill itu berlaku penuh.
+1. Panggil skill `sonar-core:core-engine` dulu (bukan command `/core`), lalu baca modul `references/ctr.md` sebelum mulai. Aturan di skill itu berlaku penuh.
 2. Nilai CTR dari data GSC di percakapan atau file, hitung dengan Python, dan pilih halaman untuk perbaikan snippet.
