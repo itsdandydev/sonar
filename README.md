@@ -52,6 +52,14 @@ Untuk claude.ai, cara memasang skill dari repo ini tergantung pengaturan workspa
 | Optimization | M.E.T.A + S.C.O.U.T + aksi C.L.U.S.T.E.R | `projects/README.md` |
 | Technical | P.R.O.B.E | `projects/README.md` |
 
+## Mode hemat (Sonnet + Haiku + Opus advisor)
+
+```bash
+claude --agent sonar-core:sonar --advisor opus
+```
+
+Sonnet menjalankan sesi dan menulis hasil, `sonar-scout` di Haiku mengerjakan pencarian read-only, dan Opus hanya dikonsultasi di tiga momen (lihat "Konsultasi advisor" di SKILL.md). Advisor butuh Anthropic API dan Claude Code dengan dukungan `/advisor`; tanpa itu agen menjalankan tiga cek tersebut sendiri.
+
 ## Cara memperbarui aturan
 
 1. Ubah file di `plugins/sonar-core/skills/core/references/`, bukan di project.

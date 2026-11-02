@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.0.0-alpha.4 (S.O.N.A.R) / 2.0.0-alpha.4 (C.O.R.E) — 2026-11-02
+
+### Ditambahkan
+- Agen `sonar` (Sonnet): orkestrator yang menjalankan skill `core`, menyerahkan pencarian read-only ke `sonar-scout`, dan konsultasi advisor Opus di keputusan besar. Mulai dengan `claude --agent sonar-core:sonar --advisor opus`.
+- Agen `sonar-scout` (Haiku, read-only): fakta context profile, cek halaman sumber, dokumentasi resmi, dan output lama yang tumpang tindih. Tidak mengedit file dan tidak menulis kesimpulan.
+- Bagian "Konsultasi advisor" di SKILL.md: konsultasi sebelum kesimpulan router atau API gate SEMrush terkunci, saat jalur data gagal dengan error yang sama dua kali, dan sebelum deliverable atau handoff dikirim. Tanpa advisor, tiga cek itu dijalankan sendiri dan dicatat di laporan.
+
 ## 3.0.0-alpha.3 (S.O.N.A.R) / 2.0.0-alpha.3 (C.O.R.E) — 2026-10-22
 
 ### Ditambahkan

@@ -36,6 +36,16 @@ Baca hanya modul yang dibutuhkan tugas saat ini, **sebelum** mulai mengerjakanny
 8. **Sebutkan keterbatasan.** Data yang tidak tersedia dan jalur pengganti yang dipakai ditulis eksplisit.
 9. **Ikuti bahasa user** (Indonesia, English, atau campur).
 
+## Konsultasi advisor
+
+Kalau tool advisor tersedia (misalnya sesi `claude --agent sonar-core:sonar --advisor opus`), konsultasi di tiga momen ini:
+
+1. **Sebelum rencana terkunci:** sebelum kesimpulan router (tahap funnel yang rusak + project tujuan) ditulis, dan sebelum API gate SEMrush disodorkan ke user.
+2. **Error yang sama dua kali:** saat jalur data (Windsor, curl, GSC UI, Chrome) gagal dengan error yang sama untuk kedua kalinya, sebelum ganti jalur atau menyerah.
+3. **Sebelum dianggap selesai:** setelah cek `evidence.md`, sebelum deliverable atau handoff dikirim.
+
+Jangan konsultasi untuk langkah rutin: baca file, satu kali retry, update status. Kalau advisor tidak tersedia, jalankan tiga cek itu sendiri dan tulis di laporan bahwa advisor tidak dipakai.
+
 ## Lima project S.O.N.A.R
 
 | Project | Alias lama | Tugas | Masuk dari |
@@ -77,4 +87,4 @@ Setiap command ini juga slash command beneran di Claude Code: `/sonar-core:diagn
 
 ## Status versi
 
-C.O.R.E 2.0.0-alpha.3. Modul teks sudah lengkap dan router sudah diuji sekali di situs nyata (lihat CHANGELOG). Script bersama (`normalize_gsc.py`, `build_url_master.py`, `classify_funnel.py`, `classify_ctr.py`, `estimate_semrush.py`) belum ada; sampai tersedia, kerjakan hitungan dengan Python di bash mengikuti definisi di modul, dan tulis kodenya dengan jelas supaya bisa dipindah ke script. Ambang angka (CTR, minimal impresi, 30% site-level) adalah titik awal yang sedang diuji.
+C.O.R.E 2.0.0-alpha.4. Modul teks sudah lengkap dan router sudah diuji sekali di situs nyata (lihat CHANGELOG). Script bersama (`normalize_gsc.py`, `build_url_master.py`, `classify_funnel.py`, `classify_ctr.py`, `estimate_semrush.py`) belum ada; sampai tersedia, kerjakan hitungan dengan Python di bash mengikuti definisi di modul, dan tulis kodenya dengan jelas supaya bisa dipindah ke script. Ambang angka (CTR, minimal impresi, 30% site-level) adalah titik awal yang sedang diuji.
