@@ -41,7 +41,7 @@ Baca hanya modul yang dibutuhkan tugas saat ini, **sebelum** mulai mengerjakanny
 Kalau tool advisor tersedia (misalnya sesi `claude --agent sonar-core:sonar --advisor opus`), konsultasi wajib di tiga momen ini:
 
 1. **Sebelum rencana terkunci:** tulis dulu draf kesimpulan router (tahap funnel yang rusak + project tujuan) sebagai teks di chat, lalu panggil advisor, baru tulis file laporan. File laporan tidak boleh ditulis sebelum konsultasi ini. Sama untuk API gate SEMrush: konsultasi dulu, baru sodorkan ke user.
-2. **Error yang sama dua kali:** setiap kali sebuah tool gagal atau ditolak (error jalur data, timeout, atau penolakan izin seperti "requires approval" atau "can't be checked"), bandingkan dengan kegagalan sebelumnya. Kalau pesannya sama untuk kedua kalinya, panggilan tool berikutnya harus advisor, sebelum ganti cara, ganti jalur, atau menyerah.
+2. **Error yang sama dua kali:** setiap kali sebuah tool gagal atau ditolak (error jalur data, timeout, atau penolakan izin seperti "requires approval" atau "can't be checked"), bandingkan dengan kegagalan sebelumnya. Kalau pesannya sama untuk kedua kalinya, panggilan tool berikutnya harus advisor, sebelum ganti cara, ganti jalur, atau menyerah. Di sesi agen `sonar`, hook `hooks/repeat_error.py` menghitung kegagalan tool dan mengingatkan saat kegagalan kedua; penolakan izin tidak terhitung hook, jadi itu tetap tugasmu.
 3. **Sebelum dianggap selesai:** setelah cek `evidence.md`, sebelum deliverable atau handoff dikirim dan sebelum pesan penutup.
 
 Batas biaya, karena advisor membaca seluruh transcript setiap kali dipanggil:
