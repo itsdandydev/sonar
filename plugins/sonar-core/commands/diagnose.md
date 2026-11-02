@@ -8,5 +8,5 @@ argument-hint: "[domain] [--lengkap atau --ringan]"
 
 Argumen: $ARGUMENTS
 
-1. Panggil skill `sonar-core:core` dulu, lalu baca modul `references/diagnostic-router.md` sebelum mulai. Aturan di skill itu berlaku penuh.
+1. Panggil skill `sonar-core:core-engine` dulu (bukan command `/core`), lalu baca modul `references/diagnostic-router.md` sebelum mulai. Aturan di skill itu berlaku penuh.
 2. Jalankan router untuk domain di argumen. Tanya mode Lengkap atau Ringan kalau belum jelas.

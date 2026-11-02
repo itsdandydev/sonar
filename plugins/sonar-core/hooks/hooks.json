@@ -1,0 +1,17 @@
+{
+  "description": "SONAR advisor moment 2: after the same tool error twice in a sonar agent session, tell the agent to consult the advisor.",
+  "hooks": {
+    "PostToolUseFailure": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -I \"${CLAUDE_PLUGIN_ROOT}/hooks/repeat_error.py\" 2>/dev/null || python -I \"${CLAUDE_PLUGIN_ROOT}/hooks/repeat_error.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

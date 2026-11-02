@@ -8,5 +8,5 @@ argument-hint: "[url website klien]"
 
 Argumen: $ARGUMENTS
 
-1. Panggil skill `sonar-core:core` dulu, lalu baca modul `references/context/quick-mode.md` sebelum mulai. Aturan di skill itu berlaku penuh.
+1. Panggil skill `sonar-core:core-engine` dulu (bukan command `/core`), lalu baca modul `references/context/quick-mode.md` sebelum mulai. Aturan di skill itu berlaku penuh.
 2. Jalankan Quick Mode B1: fetch website di argumen, isi field dari isi situs, beri awalan [INFERRED] pada field tebakan.

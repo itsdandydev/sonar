@@ -8,5 +8,5 @@ argument-hint: "[url]"
 
 Argumen: $ARGUMENTS
 
-1. Panggil skill `sonar-core:core` dulu, lalu baca modul `references/browser-inspection.md` sebelum mulai. Aturan di skill itu berlaku penuh.
+1. Panggil skill `sonar-core:core-engine` dulu (bukan command `/core`), lalu baca modul `references/browser-inspection.md` sebelum mulai. Aturan di skill itu berlaku penuh.
 2. Cek head tag dan render untuk URL di argumen. Browser hanya membaca.

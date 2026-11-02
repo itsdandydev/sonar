@@ -1,5 +1,5 @@
 ---
-name: core
+name: core-engine
 description: "C.O.R.E v2.0, fondasi bersama ekosistem S.O.N.A.R (Discovery, Strategy, Production/NEXUS, Optimization, Technical). WAJIB dipakai sebelum kerja SEO yang menyentuh data klien atau website: context profile atau onboarding klien, diagnosa kenapa halaman tidak terindeks, tidak ranking, atau tidak diklik, scan sitemap, robots.txt, canonical, render, atau tracking lewat Claude in Chrome atau curl, tarik data GSC atau GA4 (Windsor.ai, CSV, GSC UI), hitung CTR, estimasi biaya SEMrush atau API gate, dan serah-terima antar project. Trigger juga untuk /core, /import, /validate, /export, /update, /status, /upgrade, /reset, /diagnose, /gsc, /ctr, /gate, /inspect, /handoff, atau saat user menyebut P.I.N.G, S.P.E.A.R, C.L.U.S.T.E.R, M.E.T.A, S.C.O.U.T, P.R.O.B.E, atau NEXUS dalam konteks data, audit, atau biaya. Jangan menebak definisi CTR, harga SEMrush, atau format handoff dari ingatan."
 ---
 
@@ -11,7 +11,7 @@ Kenapa satu skill: aturan yang dulu di-copy ke banyak project berubah sendiri-se
 
 ## Peta modul
 
-Baca hanya modul yang dibutuhkan tugas saat ini, **sebelum** mulai mengerjakannya.
+Baca hanya modul yang dibutuhkan tugas saat ini, **sebelum** mulai mengerjakannya. Path di tabel relatif ke base directory skill ini (yang disebut saat skill dimuat). Jangan mencari `references/` lewat Glob, karena cache plugin bisa berisi versi lama.
 
 | Modul | File | Baca saat |
 |---|---|---|
@@ -35,6 +35,21 @@ Baca hanya modul yang dibutuhkan tugas saat ini, **sebelum** mulai mengerjakanny
 7. **Klaim tentang klien** hanya dari `seo.claims.approved` atau pernyataan user. Selain itu jadi placeholder `[KLAIM PERLU KONFIRMASI: ...]`.
 8. **Sebutkan keterbatasan.** Data yang tidak tersedia dan jalur pengganti yang dipakai ditulis eksplisit.
 9. **Ikuti bahasa user** (Indonesia, English, atau campur).
+
+## Konsultasi advisor
+
+Kalau tool advisor tersedia (misalnya sesi `claude --agent sonar-core:sonar --advisor opus`), konsultasi wajib di tiga momen ini:
+
+1. **Sebelum rencana terkunci:** tulis dulu draf kesimpulan router (tahap funnel yang rusak + project tujuan) sebagai teks di chat, lalu panggil advisor, baru tulis file laporan. File laporan tidak boleh ditulis sebelum konsultasi ini. Sama untuk API gate SEMrush: konsultasi dulu, baru sodorkan ke user.
+2. **Error yang sama dua kali:** setiap kali sebuah tool gagal atau ditolak (error jalur data, timeout, atau penolakan izin seperti "requires approval" atau "can't be checked"), bandingkan dengan kegagalan sebelumnya. Kalau pesannya sama untuk kedua kalinya, panggilan tool berikutnya harus advisor, sebelum ganti cara, ganti jalur, atau menyerah. Di sesi agen `sonar`, hook `hooks/repeat_error.py` menghitung kegagalan tool dan mengingatkan saat kegagalan kedua; penolakan izin tidak terhitung hook, jadi itu tetap tugasmu.
+3. **Sebelum dianggap selesai:** setelah cek `evidence.md`, sebelum deliverable atau handoff dikirim dan sebelum pesan penutup.
+
+Batas biaya, karena advisor membaca seluruh transcript setiap kali dipanggil:
+- Maksimal empat konsultasi per tugas, dan tidak pernah dua konsultasi berturut-turut tanpa langkah lain di antaranya.
+- Jangan konsultasi untuk langkah rutin: baca file, satu kali retry, update status.
+- Simpan output besar (HTML, sitemap, hasil crawl) ke file dan tampilkan ringkasan saja, maksimal sekitar 30 baris per perintah. Transcript yang kecil membuat Sonnet dan advisor sama-sama lebih murah.
+
+Kalau advisor tidak tersedia, jalankan tiga cek itu sendiri. Di bagian akhir laporan, catat momen mana yang dikonsultasi, mana yang terlewat, dan alasannya.
 
 ## Lima project S.O.N.A.R
 
@@ -77,4 +92,4 @@ Setiap command ini juga slash command beneran di Claude Code: `/sonar-core:diagn
 
 ## Status versi
 
-C.O.R.E 2.0.0-alpha.3. Modul teks sudah lengkap dan router sudah diuji sekali di situs nyata (lihat CHANGELOG). Script bersama (`normalize_gsc.py`, `build_url_master.py`, `classify_funnel.py`, `classify_ctr.py`, `estimate_semrush.py`) belum ada; sampai tersedia, kerjakan hitungan dengan Python di bash mengikuti definisi di modul, dan tulis kodenya dengan jelas supaya bisa dipindah ke script. Ambang angka (CTR, minimal impresi, 30% site-level) adalah titik awal yang sedang diuji.
+C.O.R.E 2.0.0-alpha.4. Modul teks sudah lengkap dan router sudah diuji sekali di situs nyata (lihat CHANGELOG). Script bersama (`normalize_gsc.py`, `build_url_master.py`, `classify_funnel.py`, `classify_ctr.py`, `estimate_semrush.py`) belum ada; sampai tersedia, kerjakan hitungan dengan Python di bash mengikuti definisi di modul, dan tulis kodenya dengan jelas supaya bisa dipindah ke script. Ambang angka (CTR, minimal impresi, 30% site-level) adalah titik awal yang sedang diuji.

@@ -1,6 +1,6 @@
 # Lima project S.O.N.A.R v3
 
-Status: spesifikasi awal. Instruksi project dan knowledge file per project akan ditulis di folder masing-masing (`projects/discovery/`, dst.) saat migrasi project itu dimulai. Semua project membaca skill `core` untuk context profile, data, CTR, SEMrush, bukti, dan handoff, dan tidak menyimpan versi sendiri dari aturan itu.
+Status: spesifikasi awal. Instruksi project dan knowledge file per project akan ditulis di folder masing-masing (`projects/discovery/`, dst.) saat migrasi project itu dimulai. Semua project membaca skill `core-engine` untuk context profile, data, CTR, SEMrush, bukti, dan handoff, dan tidak menyimpan versi sendiri dari aturan itu.
 
 Urutan migrasi yang disepakati: C.O.R.E → uji router di Gwenchana (hasil pertama kemungkinan besar ke Technical: bug canonical) → Discovery → Optimization → Production → Strategy. Project lama diarsipkan setelah project barunya lulus uji dengan satu klien nyata, tidak dihapus.
 
@@ -38,7 +38,7 @@ Urutan migrasi yang disepakati: C.O.R.E → uji router di Gwenchana (hasil perta
 
 Catatan: repo NEXUS sudah jauh lebih maju dari project N.E.X.U.S di claude.ai yang dibahas di handover. Beberapa masalah di handover sudah selesai di repo (file command lengkap, riset SERP live lewat browser, kode proyek `NXS-...`, `/resume`, `/constructive-self-criticize`, mode FAQ delivery, voice). Project claude.ai lama sebaiknya diarsipkan atau disinkronkan ke repo.
 
-**Kontrak masuk:** lihat `handoff.md` bagian 5 di skill `core`.
+**Kontrak masuk:** lihat `handoff.md` bagian 5 di skill `core-engine`.
 
 **Usulan untuk repo NEXUS (disetujui Lawrence Philemon, 2026-10-16; dikerjakan di repo NEXUS):** membaca context profile C.O.R.E untuk klaim, voice, dan tujuan CTA; menyamakan snippet browser dengan modul browser C.O.R.E; verifikasi statistik YMYL dengan membuka sumber.
 

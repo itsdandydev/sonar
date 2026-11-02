@@ -8,5 +8,5 @@ argument-hint: "[nama klien] [--quick]"
 
 Argumen: $ARGUMENTS
 
-1. Panggil skill `sonar-core:core` dulu, lalu baca modul `references/context/full-mode.md` (atau `quick-mode.md` kalau ada `--quick`) sebelum mulai. Aturan di skill itu berlaku penuh.
+1. Panggil skill `sonar-core:core-engine` dulu (bukan command `/core`), lalu baca modul `references/context/full-mode.md` (atau `quick-mode.md` kalau ada `--quick`) sebelum mulai. Aturan di skill itu berlaku penuh.
 2. Jalankan alur context profile dari Fase 0 untuk klien di argumen. Kalau ada --quick, langsung Quick Mode.

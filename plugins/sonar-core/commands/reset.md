@@ -8,5 +8,5 @@ argument-hint: ""
 
 Argumen: $ARGUMENTS
 
-1. Panggil skill `sonar-core:core` dulu, lalu baca modul `references/context/full-mode.md` sebelum mulai. Aturan di skill itu berlaku penuh.
+1. Panggil skill `sonar-core:core-engine` dulu (bukan command `/core`), lalu baca modul `references/context/full-mode.md` sebelum mulai. Aturan di skill itu berlaku penuh.
 2. Abaikan isian profil sesi ini dan mulai lagi dari Fase 0 (status klien, lalu pilihan mode).

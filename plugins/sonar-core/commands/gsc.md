@@ -8,5 +8,5 @@ argument-hint: "[domain] [rentang tanggal]"
 
 Argumen: $ARGUMENTS
 
-1. Panggil skill `sonar-core:core` dulu, lalu baca modul `references/data-sources.md` sebelum mulai. Aturan di skill itu berlaku penuh.
+1. Panggil skill `sonar-core:core-engine` dulu (bukan command `/core`), lalu baca modul `references/data-sources.md` sebelum mulai. Aturan di skill itu berlaku penuh.
 2. Tarik data GSC lewat jalur yang tercatat di context profile; kalau belum ada, tanya jalurnya.

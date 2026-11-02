@@ -8,5 +8,5 @@ argument-hint: ""
 
 Argumen: $ARGUMENTS
 
-1. Panggil skill `sonar-core:core` dulu, lalu baca modul `references/context/output-schema.md` sebelum mulai. Aturan di skill itu berlaku penuh.
+1. Panggil skill `sonar-core:core-engine` dulu (bukan command `/core`), lalu baca modul `references/context/output-schema.md` sebelum mulai. Aturan di skill itu berlaku penuh.
 2. Baca context_profile.json yang ada dulu, lalu tampilkan field terisi, kosong, dan [INFERRED].
